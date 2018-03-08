@@ -41,6 +41,10 @@ testem.log
 
 #Lucid
 .lucidsiteprefs.xml
+/src/lucid.js
+
+#Pinegrow
+/html_creation
 
 # System Files
 .DS_Store

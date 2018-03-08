@@ -18,5 +18,13 @@ span.glyphicon-thumbs-up {
   box-shadow:  2px 2px 15px 0px #000000;
   min-height: 500px;
   max-height: 500px;
+  width: 280px;
+  min-width: 280px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
+.img-circle {
+  margin-left: 60px;
+}

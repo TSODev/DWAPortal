@@ -1,5 +1,6 @@
 <div class="col-sm-6 col-md-4" (click)="onSelected()">
-  <div class="thumbnail" style="cursor: pointer;" (click)="onClickOpen(service)">
+<div class="maincontainer">
+  <div class="thumbnail" style="cursor: pointer;">
     <ul class="pagination">
       <li class="page-item">
         <span
@@ -9,6 +10,9 @@
         </span>
       </li>
     </ul>
+    <div
+        class="thumbail" 
+        (click)="onClickOpen(service)">
     <img alt="A generic square placeholder image with rounded corners"
          src="http://pinegrow.com/placeholders/img19_thumb.jpg"
          width="140"
@@ -28,5 +32,7 @@
               [titles]="['one', 'two', 'three', 'four', 'five']">
       </rating>-->
     </div>
+    </div>
   </div>
+</div>
 </div>

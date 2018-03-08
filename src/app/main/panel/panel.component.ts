@@ -15,6 +15,7 @@ export class PanelComponent implements OnInit {
 
   services: Service[] = [];
   servicesInCatalog: string[];
+  hasServicesInCatalog: boolean;
 
   	constructor(private common: CommonService,
                 private backend: BackendDatastoreService
@@ -24,6 +25,7 @@ export class PanelComponent implements OnInit {
 
       console.log('Panel', Date().toString());
       this.services = this.common.FullCatalog;
+      this.hasServicesInCatalog = this.hasServicesinCatalog();
 
   	}
 
@@ -35,6 +37,11 @@ export class PanelComponent implements OnInit {
 
   onServiceSelected(service: Service) {
 //    this.router.navigate(['/service/' + service.id]);
+    }
+
+    hasServicesinCatalog(): boolean {
+      console.log('Has Services In Catalog');
+      return this.services.length !== 0;
     }
 
 }

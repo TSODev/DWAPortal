@@ -36,31 +36,32 @@
     <a class="right carousel-control" href="#carousel1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
   </div>
 </div>
-<div class="container offer_header">
-  <div class="col-xs-6 col-md-2 offer_icon">
-  <a href="#" class="thumbnail">
-    <img src="http://pinegrow.com/placeholders/img10.jpg" alt="">
-  </a>
+<div class="container offerheader">
+  <div class="col-md-2 offericon col-xs-6 col-xs-offset-3 col-md-offset-0">
+      <a href="#" class="thumbnail">
+          <img src="http://pinegrow.com/placeholders/img10.jpg" alt="">
+      </a>
   </div>
-  <div class="col-md-7 main_Info">
-    <h2>{{ serviceOffer.name }}</h2>
-    <h4>{{ serviceOffer.categories }}</h4>
+  <div class="mainInfo col-md-offset-0 col-md-7 col-xs-offset-0 col-xs-12">
+      <h2>{{ serviceOffer.name }}</h2>
+      <h4>{{ serviceOffer.categories }}</h4>
   </div>
-  <div class="col-md-3 action_box">
-    <div class="container">
-      <div class="row">
-        <p>QTY:</p>
+  <div class="col-md-3 actionbox col-xs-12" style="top: 15px;">
+      <div class="container" style="border: 1px solid;
+  width: 220px;">
+          <div class="row">
+              <p style="display: block;">QTY:</p>
+          </div>
+          <div class="row">
+              <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-shopping-cart" style="font-size: 20px;"></span>Add to Cart</span>
+          </div>
+          <div class="row">
+              <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-check" style="font-size: 20px;"></span>Request now</span>
+          </div>
+          <div class="row">
+              <p>Request for:</p>
+          </div>
       </div>
-      <div class="row">
-        <button type="button" class="btn btn-default">Add to Cart</button>
-      </div>
-      <div class="row">
-        <button type="button" class="btn btn-default">Request now</button>
-      </div>
-      <div class="row">
-        <p>Request for:</p>
-      </div>
-    </div>
   </div>
 </div>
 <div class="container offerdetails">

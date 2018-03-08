@@ -1,7 +1,5 @@
 <app-header></app-header>
-<div class="container">
-  <p> Catalog >  </p>
-  <hr>
+<div class="maincontainer">
   <div class="container">
     <app-serviceoffer
         *ngFor="let serviceEl of services | forcategoryid: id | orderBy : name"
