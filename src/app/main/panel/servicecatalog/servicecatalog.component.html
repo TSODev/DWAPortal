@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+  <p> Catalog >  </p>
+  <hr>
+  <div class="container">
+    <app-serviceoffer
+        *ngFor="let serviceEl of services | forcategoryid: id | orderBy : name"
+        [service]="serviceEl"
+        (serviceSelected)="onServiceSelected(serviceEl)">
+    </app-serviceoffer>
+  </div>
+</div>
+<app-footer></app-footer>

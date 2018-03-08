@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="container">
+  <p> Categories </p>
+  <hr>
+  <app-category
+        *ngFor="let categoryEl of categories | maincategory | orderBy : name"
+        [category]="categoryEl"
+        (categorySelected)="onCategorySelected(categoryEl, true)">
+  </app-category>
+</div>
+<app-footer></app-footer>

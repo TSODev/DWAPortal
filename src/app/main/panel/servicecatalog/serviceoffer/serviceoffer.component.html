@@ -1,0 +1,32 @@
+<div class="col-sm-6 col-md-4" (click)="onSelected()">
+  <div class="thumbnail" style="cursor: pointer;" (click)="onClickOpen(service)">
+    <ul class="pagination">
+      <li class="page-item">
+        <span
+          [ngClass]="pinstyle"
+          (click)='onPinSelected(service)'
+        >
+        </span>
+      </li>
+    </ul>
+    <img alt="A generic square placeholder image with rounded corners"
+         src="http://pinegrow.com/placeholders/img19_thumb.jpg"
+         width="140"
+         height="140"
+         class="img-circle">
+    <div class="caption">
+      <h3>{{ service.name }}</h3>
+      <p> {{ service.excerpt }}</p>
+      <hr>
+<!--      <rating [(ngModel)]="service.rating"
+              [max]="5"
+              iconClass="fa-star"
+              [readonly]="false"
+              [disabled]="false"
+              [required]="true"
+              [float]="true"
+              [titles]="['one', 'two', 'three', 'four', 'five']">
+      </rating>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="www.tso.fr"></a>
+      <h4 class="navbar-text">{{ AppName }}</h4>
+    </div>
+      <ul class="icon-user nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a class="dropdown-toggle" role="button">Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li routerLinkActive="active">
+              <a routerLink="/catalog">Service Catalog</a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="/categories">Categories</a>
+            </li>
+            <li routerLinkActive="active">
+                <a routerLink="/action">Something else here</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li routerLinkActive="active">
+                <a routerLink="/main">Home</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li routerLinkActive="active">
+                <a routerLink="/logout">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,22 @@
+span.glyphicon-pushpin {
+  font-size: 1.5em;
+}
+
+span.glyphicon-asterisk {
+  font-size: 1.5em;
+}
+
+span.glyphicon-thumbs-up {
+  font-size: 1.5em;
+}
+
+.pagination>li>a, .pagination>li>span {
+  border: none;
+}
+
+.thumbnail {
+  box-shadow:  2px 2px 15px 0px #000000;
+  min-height: 500px;
+  max-height: 500px;
+}
+

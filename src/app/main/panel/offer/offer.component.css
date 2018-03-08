@@ -1,0 +1,22 @@
+
+.offer_header {
+  top: 10px;
+  bottom: 10px;
+  height: 200px;
+}
+
+.offer_details {
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+}
+
+.offer_icon {
+  top: 15px;
+}
+
+.main_Info {
+  top: 10px;
+}
+

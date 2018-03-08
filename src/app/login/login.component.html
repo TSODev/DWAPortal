@@ -1,0 +1,88 @@
+<div class="maincontainer">
+<div class="full-screen">
+<div class="login-body full-screen screen-bg">
+		<div class="login-form">
+			<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+				<div>
+					<div class="login-form__logo"></div>
+					<div class="login-form__logo-product">{{ productName }}</div>
+				</div>
+				<div formGroupName="serverData" class="login-form__input-row">
+					<div class="form-group">
+						<input 
+						class="form-control"
+						type='text'
+						id='servername'
+						formControlName='servername'
+						placeholder="Server Name">
+						<span></span>
+					</div>
+					<div class="form-group">
+						<input 
+						class="form-control"
+						type='text'
+						id='protocol'
+						formControlName='protocol'
+						placeholder="Protocol">
+						<span></span>
+					</div>
+					<div class="form-group">
+						<input 
+						class="form-control"
+						type='text'
+						id='port'
+						formControlName='port'
+						placeholder="Port Number" 
+						required >
+						<span></span>
+					</div>
+				</div>
+				<div formGroupName="userData">
+					<div class="form-group login-form__label">
+						<input 
+						class="form-control"
+						type='text'
+						id='username'
+						formControlName='username'
+						placeholder="Login">
+						<span></span>
+					</div>
+					<div class="form-group">
+						<input 
+						class="form-control"
+						type='password'
+						id='password'
+						formControlName='password'
+						placeholder="Password" 
+						required >
+						<span></span>
+					</div>
+				</div>
+				<div class="form-group marker-error"  *ngIf="login_error" >
+					<input 
+					class="form-control marker-error"
+					type='text'
+					id='error'
+					formControlName='errormessage'>
+					<span></span>
+				</div>
+				<span
+          			*ngIf="!loginForm.valid && loginForm.touched"
+          			class="help-block">Please enter valid data!</span>
+        		<button class="btn btn-login" type="submit">Login</button>
+			</form>
+		</div>
+	<div class="login-footer">
+		<div class="login-footer-copyright">
+			<ul>
+				<li>© Copyright 2017 <a href="http://www.tsodev.fr">tsodev</a> {{'login.copyright'}}</li>
+				<li>{{'trademark'}}</li>
+			</ul>
+		</div>
+		<a class="login-footer-logo" href="http://www.tsodev.fr">
+            {{'login.poweredBy'}}
+		</a>
+	</div>
+</div>
+</div>
+</div>

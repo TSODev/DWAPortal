@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "http://mobility172-myitsbe.trybmc.com:80",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

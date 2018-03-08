@@ -1,0 +1,20 @@
+.offerheader {
+    top: 10px;
+    bottom: 10px;
+    height: 200px;
+}
+
+.offerdetails {
+    top: 10px;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+}
+
+.offericon {
+    top: 15px;
+}
+
+.mainInfo {
+    top: 10px;
+}
