@@ -14,18 +14,16 @@ import {Service} from '../../shared/models/service.model';
 export class PanelComponent implements OnInit {
 
   services: Service[] = [];
-  servicesInCatalog: string[];
-  hasServicesInCatalog: boolean;
+  servicesInCatalog = [''];
+  serviceIsDefined = false;
 
-  	constructor(private common: CommonService,
-                private backend: BackendDatastoreService
-                ) { }
+  	constructor(private common: CommonService) { }
 
   	ngOnInit() {
 
       console.log('Panel', Date().toString());
       this.services = this.common.FullCatalog;
-      this.hasServicesInCatalog = this.hasServicesinCatalog();
+      this.serviceIsDefined = true;
 
   	}
 

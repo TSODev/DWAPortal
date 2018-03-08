@@ -1,12 +1,12 @@
-<div  *ngIf= "hasServicesInCatalog" class="maincontainer full-screen">
+
+  <div *ngIf= "(servicesInCatalog.length !== 0)" class="maincontainer full-screen">
         <app-serviceoffer
           *ngFor="let serviceEl of services | customlist: servicesInCatalog "
           [service]="serviceEl"
           (serviceSelected)="onServiceSelected(serviceEl)">
         </app-serviceoffer>
-</div>
-<div *ngIf="!hasServicesInCatalog" class="maincontainer full-screen">
-    <div class="maincontainer">
+  </div>
+
+    <div *ngIf= "(servicesInCatalog.length === 0)"class="maincontainer full-screen empty">
       <p> Add Some Services to this page !</p>
     </div>
-</div>
