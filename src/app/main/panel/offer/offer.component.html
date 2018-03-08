@@ -1,6 +1,6 @@
 <app-header></app-header>
-<div class="container">
-  <div id="carousel1" class="carousel slide" data-ride="carousel">
+<div *ngIf= "serviceIsDefined" class="maincontainer">
+  <div *ngIf= "(serviceOffer.media.length !== 0)" id="carousel1" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel1" data-slide-to="0" class="active"></li>
@@ -36,44 +36,47 @@
     <a class="right carousel-control" href="#carousel1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
   </div>
 </div>
-<div class="container offerheader">
-  <div class="col-md-2 offericon col-xs-6 col-xs-offset-3 col-md-offset-0">
-      <a href="#" class="thumbnail">
+<div *ngIf= "serviceIsDefined"  class="container offer_header">
+  <div class="offer_icon col-md-2 col-xs-6 col-xs-offset-3 col-md-offset-0">
+      <a href="#" class="thumbnail offer_icon">
           <img src="http://pinegrow.com/placeholders/img10.jpg" alt="">
       </a>
   </div>
-  <div class="mainInfo col-md-offset-0 col-md-7 col-xs-offset-0 col-xs-12">
+  <div class="main_Info col-md-offset-0 col-md-7 col-xs-offset-0 col-xs-12">
       <h2>{{ serviceOffer.name }}</h2>
       <h4>{{ serviceOffer.categories }}</h4>
   </div>
-  <div class="col-md-3 actionbox col-xs-12" style="top: 15px;">
-      <div class="container" style="border: 1px solid;
-  width: 220px;">
-          <div class="row">
-              <p style="display: block;">QTY:</p>
+  <div class="col-md-3 actionbox col-xs-12">
+      <div class="container offer_action">
+          <div class="row row_action">
+              <p class= "quantity">QTY:</p>
           </div>
-          <div class="row">
+          <div class="row row_action">
               <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-shopping-cart" style="font-size: 20px;"></span>Add to Cart</span>
           </div>
-          <div class="row">
+          <div class="row row_action">
               <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-check" style="font-size: 20px;"></span>Request now</span>
           </div>
-          <div class="row">
+          <div class="row row_action">
               <p>Request for:</p>
           </div>
       </div>
   </div>
 </div>
-<div class="container offerdetails">
+<div  *ngIf= "serviceIsDefined"  class="container offer_details">
   <ul class="nav nav-tabs">
-    <li class="active">
+    <li class="active" [ngClass]="'activetab1'">
       <a (click)="showtabdetails()">Details</a>
     </li>
-    <li>
+    <li [ngClass]="'activetab2'">
       <a (click)="showtabratings()">Rating Timeline</a>
     </li>
   </ul>
   <div *ngIf='tabdetails' class="container" id="Details_content">
+    <div *ngIf="(serviceOffer.bundledServices.length !== 0)" class="container offer_bundle">
+      <h3>This package contains {{ serviceOffer.bundledServices.length }} items</h3>
+    </div>
+    <hr>
     <h3>Description</h3>
     <p>{{ serviceOffer.description }}</p>
   </div>

@@ -23,5 +23,5 @@ export class Service {
       public provisioningTime: ProvisioningTime,
       public bundledServices: Service[],
       public entitled: boolean
-  ){}
+  ) {}
 }

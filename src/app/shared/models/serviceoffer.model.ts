@@ -15,7 +15,7 @@ export class ServiceOffer {
     public available: boolean,
     public description: string,
     public excerpt: string,
-    public iconUrl : string,
+    public iconUrl: string,
     public rating: number,
     public createdDate: string,
     public ratingCount: number,
@@ -39,5 +39,15 @@ export class ServiceOffer {
     public score: number,
     public unavailableRequiredServicesCount: number,
     public calculatedAvailability:boolean
-  ) { }
+  ) { 
+    this.name = '';
+    this.description = '';
+    this.excerpt = '';
+  }
+
+  init(name: string, excerpt: string, description: string) {
+    this.name = name;
+    this.description = description;
+    this.excerpt = excerpt;
+  }
 }

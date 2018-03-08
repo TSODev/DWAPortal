@@ -12,9 +12,11 @@ import {ServiceOffer} from '../../../shared/models/serviceoffer.model';
 
 export class OfferComponent implements OnInit {
 
-  serviceOffer: ServiceOffer;
-
+  serviceOffer: ServiceOffer; 
+  serviceIsDefined = false;
   tabdetails = true;
+  activetab1 = 'active';
+  activetab2 = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -33,24 +35,27 @@ export class OfferComponent implements OnInit {
       .subscribe(
         (data: ServiceOffer) => {
           this.serviceOffer = data;
+          this.serviceIsDefined = true;
           console.log('Service Offer : ', this.serviceOffer);
-
         },
         (error) => {
-          console.log('Login ', error);
+          console.log('Service Offer :  ', error);
         });
   }
 
-  toggletabdetails(){
+  toggletabdetails() {
     this.tabdetails = !this.tabdetails;
+    if (this.activetab1 === '') { this.activetab1 = 'active'; } else { this.activetab1 = ''; }
+    if (this.activetab2 === '') { this.activetab2 = 'active'; } else { this.activetab2 = ''; }
   }
 
-  showtabdetails(){
+  showtabdetails() {
     this.tabdetails = true;
   }
 
   showtabratings() {
     this.tabdetails = false;
   }
+
 }
 
