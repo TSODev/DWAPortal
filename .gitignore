@@ -46,6 +46,11 @@ testem.log
 #Pinegrow
 /html_creation
 
+# Server Configuration
+/src/server/scratch
+/src/server/config
+
+
 # System Files
 .DS_Store
 Thumbs.db
