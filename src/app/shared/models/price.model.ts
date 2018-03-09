@@ -4,5 +4,5 @@ export class Price {
     public paymentType: string,
     public currency: string,
     public paymentSchedule: string
-  ){}
+  ) {}
 }
