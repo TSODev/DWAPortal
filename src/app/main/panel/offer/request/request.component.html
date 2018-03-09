@@ -1,0 +1,36 @@
+<div *ngIf= (requestIsDefined)>
+  <div class="container request_header">
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <img src="http://pinegrow.com/placeholders/img11.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <h1>Heading 1</h1>
+      </div>
+      <div class="row">
+        <h4>Heading 4</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container tabs">
+    <ul class="nav nav-tabs">
+      <li  *ngFor="let page of request.questionnaire.pages"class="active">
+        <a>{{ page.pageItems.title }}</a>
+      </li>
+
+      <li>
+        <a href="#">Confirmation</a>
+      </li>
+    </ul>
+  </div>
+  <div class="container questionnaire">
+    <h4>Questionnaire</h4>
+    <div>
+      <div class="row pg-empty-placeholder question_label"></div>
+      <div class="row pg-empty-placeholder question_label question_descr"></div>
+      <div class="row pg-empty-placeholder question_answer"></div>
+    </div>
+  </div>
+</div>

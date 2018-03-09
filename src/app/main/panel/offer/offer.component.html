@@ -55,7 +55,12 @@
               <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-shopping-cart" style="font-size: 20px;"></span>Add to Cart</span>
           </div>
           <div class="row row_action">
-              <span type="button" class="btn btn-primary" style="display: grid;"><span class="glyphicon glyphicon-check" style="font-size: 20px;"></span>Request now</span>
+              <span 
+                    (click)="onRequestClicked()"
+                    type="button"
+                     class="btn btn-primary"
+                      style="display: grid;">
+                      <span class="glyphicon glyphicon-check" style="font-size: 20px;"></span>Request now</span>
           </div>
           <div class="row row_action">
               <p>Request for:</p>

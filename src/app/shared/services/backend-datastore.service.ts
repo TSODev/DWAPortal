@@ -7,6 +7,7 @@ import "rxjs/add/operator/catch";
 import { Category } from '../models/category.model';
 import { Service } from '../models/service.model';
 import { ServiceOffer } from '../models/serviceoffer.model';
+import { Request } from '../models/request.model';
 
 
 @Injectable()
@@ -85,6 +86,16 @@ export class BackendDatastoreService {
         responseType: 'json'
       })
       .map(data => <ServiceOffer>data);
+  }
+
+  initializeServiceRequest(serviceId: string): Observable<Request> {
+    return this.http.post(this.proxyURL + '/services/' + serviceId + '/request',
+  {},
+  {
+    reportProgress: true,
+    responseType: 'json'
+  })
+  .map(data => <Request>data);
   }
 
   getIconbyUrl(iconurl: string): Observable<string> {

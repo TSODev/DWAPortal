@@ -35,6 +35,7 @@ import { LoadingComponent } from './main/panel/loading/loading.component';
 import { CustomlistPipe } from './shared/pipes/customlist.pipe';
 import { CategoryPipe } from './shared/pipes/forcategoryid.pipe';
 import { OfferComponent } from './main/panel/offer/offer.component';
+import { RequestComponent } from './main/panel/offer/request/request.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { OfferComponent } from './main/panel/offer/offer.component';
     CustomlistPipe,
     CategoryPipe,
     OfferComponent,
+    RequestComponent,
   ],
   imports: [
     BrowserModule,

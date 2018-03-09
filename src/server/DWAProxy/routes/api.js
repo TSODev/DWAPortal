@@ -232,6 +232,33 @@ router.post('/services/:CategoryId', function(req, res, next) {
   })
 });
 
+// Initiate a Service Request
+router.post('/services/:ServiceId/request', function (req, res, next) {
+  const serviceid = req.params.ServiceId;
+  console.log("Initialize a Service Request : " + serviceid);
+  const url = localStorage.getItem('urlbase') + '/api/myit-sb/services/'+ serviceid+'/requests';
+  console.log(url);
+  const body = req.body;
+  console.log('body : ', body);
+  callAPIPost(url, body, function (e, response) {
+    if (e === null) {
+      if (response.status === 201) {
+        console.log(response.text);
+        res.set(response.headers);
+        res.send(response.text);
+        res.status(response.status);
+        res.end();
+      }
+    } else {
+      console.log(e);
+      res.send(e.Error);
+      res.status(500);
+      res.end()
+    }
+  })
+});
+
+
 router.get('/offer/:ServiceId', function(req, res, next) {
   serviceid = req.params.ServiceId;
   console.log("get ServiceOffering Info", serviceid);

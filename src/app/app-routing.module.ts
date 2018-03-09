@@ -13,6 +13,7 @@ import {CategoriesComponent} from './main/panel/categories/categories-list.compo
 import {SubcategoriesComponent} from './main/panel/categories/subcategories/subcategories-list.component';
 import { ServicecatalogComponent } from './main/panel/servicecatalog/servicecatalog.component';
 import {OfferComponent} from './main/panel/offer/offer.component';
+import {RequestComponent} from './main/panel/offer/request/request.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'catalog/:id', canActivate: [AuthGuard], component: ServicecatalogComponent},
   { path: 'offer', canActivate: [AuthGuard], component: OfferComponent},
   { path: 'offer/:id', canActivate: [AuthGuard], component: OfferComponent},
+  {path: 'request/:id', canActivate: [AuthGuard], component: RequestComponent},
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent},
   { path: 'not-found', component: NotFoundComponent },
