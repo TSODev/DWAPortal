@@ -16,21 +16,24 @@
   </div>
   <div class="container tabs">
     <ul class="nav nav-tabs">
-      <li  *ngFor="let page of request.questionnaire.pages"class="active">
-        <a>{{ page.pageItems.title }}</a>
+      <li *ngFor="let page of request.questionnaire.pages" class="active">
+          <a>{{ page.title }}</a>
       </li>
-
+      <div class="container questionnaire">
+          <h4>Questionnaire</h4>
+          <div *ngFor="let item of page.pageitems">
+            <div class="row pg-empty-placeholder question_label">
+              <a>{{ item.label}}</a>
+            </div>
+            <div class="row pg-empty-placeholder question_label question_descr"></div>
+            <div class="row pg-empty-placeholder question_answer"></div>
+          </div>
+      </div>
       <li>
         <a href="#">Confirmation</a>
       </li>
     </ul>
+
   </div>
-  <div class="container questionnaire">
-    <h4>Questionnaire</h4>
-    <div>
-      <div class="row pg-empty-placeholder question_label"></div>
-      <div class="row pg-empty-placeholder question_label question_descr"></div>
-      <div class="row pg-empty-placeholder question_answer"></div>
-    </div>
-  </div>
+
 </div>
