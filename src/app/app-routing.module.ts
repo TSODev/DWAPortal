@@ -25,7 +25,7 @@ const appRoutes: Routes = [
   { path: 'catalog/:id', canActivate: [AuthGuard], component: ServicecatalogComponent},
   { path: 'offer', canActivate: [AuthGuard], component: OfferComponent},
   { path: 'offer/:id', canActivate: [AuthGuard], component: OfferComponent},
-  {path: 'request/:id', canActivate: [AuthGuard], component: RequestComponent},
+  { path: 'request/:id', canActivate: [AuthGuard], component: RequestComponent},
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent},
   { path: 'not-found', component: NotFoundComponent },
